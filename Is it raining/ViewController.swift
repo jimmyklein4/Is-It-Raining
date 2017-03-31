@@ -7,19 +7,30 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+//        switch CLLocationManager.authorizationStatus() {
+//        case CLAuthorizationStatus.authorizedAlways:
+//            
+//        }
+        
     }
 
+    @IBOutlet weak var rainingLabel: UILabel!
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func testButton(_ sender: Any) {
+        print("tesT")
+        let weatherAPI = WeatherAPI()
+        weatherAPI.getWeather()
+    }
 
 }
 

@@ -12,6 +12,7 @@
 		BF816C7B1E8EFE85003C5F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF816C791E8EFE85003C5F2B /* Main.storyboard */; };
 		BF816C7D1E8EFE85003C5F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF816C7C1E8EFE85003C5F2B /* Assets.xcassets */; };
 		BF816C801E8EFE85003C5F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF816C7E1E8EFE85003C5F2B /* LaunchScreen.storyboard */; };
+		BF816C881E8F0663003C5F2B /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF816C871E8F0663003C5F2B /* WeatherAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BF816C7C1E8EFE85003C5F2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF816C7F1E8EFE85003C5F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF816C811E8EFE85003C5F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF816C871E8F0663003C5F2B /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				BF816C751E8EFE85003C5F2B /* AppDelegate.swift */,
 				BF816C771E8EFE85003C5F2B /* ViewController.swift */,
+				BF816C871E8F0663003C5F2B /* WeatherAPI.swift */,
 				BF816C791E8EFE85003C5F2B /* Main.storyboard */,
 				BF816C7C1E8EFE85003C5F2B /* Assets.xcassets */,
 				BF816C7E1E8EFE85003C5F2B /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF816C881E8F0663003C5F2B /* WeatherAPI.swift in Sources */,
 				BF816C781E8EFE85003C5F2B /* ViewController.swift in Sources */,
 				BF816C761E8EFE85003C5F2B /* AppDelegate.swift in Sources */,
 			);
