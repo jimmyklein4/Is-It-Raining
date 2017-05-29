@@ -13,6 +13,7 @@
 		BF816C7D1E8EFE85003C5F2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF816C7C1E8EFE85003C5F2B /* Assets.xcassets */; };
 		BF816C801E8EFE85003C5F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF816C7E1E8EFE85003C5F2B /* LaunchScreen.storyboard */; };
 		BF816C881E8F0663003C5F2B /* WeatherAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF816C871E8F0663003C5F2B /* WeatherAPI.swift */; };
+		BFBD8F6F1EDB9C35007855DA /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFBD8F6E1EDB9C35007855DA /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BF816C7F1E8EFE85003C5F2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF816C811E8EFE85003C5F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF816C871E8F0663003C5F2B /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
+		BFBD8F6E1EDB9C35007855DA /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BF816C7C1E8EFE85003C5F2B /* Assets.xcassets */,
 				BF816C7E1E8EFE85003C5F2B /* LaunchScreen.storyboard */,
 				BF816C811E8EFE85003C5F2B /* Info.plist */,
+				BFBD8F6E1EDB9C35007855DA /* Keys.plist */,
 			);
 			path = "Is it raining";
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFBD8F6F1EDB9C35007855DA /* Keys.plist in Resources */,
 				BF816C801E8EFE85003C5F2B /* LaunchScreen.storyboard in Resources */,
 				BF816C7D1E8EFE85003C5F2B /* Assets.xcassets in Resources */,
 				BF816C7B1E8EFE85003C5F2B /* Main.storyboard in Resources */,
@@ -308,6 +312,7 @@
 				BF816C861E8EFE85003C5F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

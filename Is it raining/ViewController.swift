@@ -9,28 +9,57 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController {
 
+class ViewController: UIViewController, CLLocationManagerDelegate {
+
+    @IBOutlet var rainingLabel: UILabel!
+    
+    private let weatherAPI = WeatherAPI()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        switch CLLocationManager.authorizationStatus() {
-//        case CLAuthorizationStatus.authorizedAlways:
-//            
-//        }
+        let locationManager = CLLocationManager()
+        if(CLLocationManager.locationServicesEnabled()){
+            //locationManager.requestAlwaysAuthorization()
+            locationManager.delegate = self
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
+        }
         
+        weatherAPI.delegate = self
+        weatherAPI.getWeather(location: locationManager.location)
     }
 
-    @IBOutlet weak var rainingLabel: UILabel!
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        weatherAPI.getWeather(location: manager.location)
     }
 
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+    
+    func updateRaining(result: String){
+        if(result == "Rain"){
+            print(NSDate.timeIntervalSinceReferenceDate)
+            DispatchQueue.main.async{
+                self.rainingLabel.text = "Yes it is raining"
+            }
+        } else {
+            print(NSDate.timeIntervalSinceReferenceDate)
+            DispatchQueue.main.async{
+                self.rainingLabel.text = "No it is \(result)"
+            }
+        }
+    }
+    
     @IBAction func testButton(_ sender: Any) {
         print("tesT")
-        let weatherAPI = WeatherAPI()
-        weatherAPI.getWeather()
     }
-
 }
 
+extension ViewController: WeatherDataDelegate {
+    func didReceiveWeatherUpdate(data: String) {
+        updateRaining(result: data)
+    }
+}
