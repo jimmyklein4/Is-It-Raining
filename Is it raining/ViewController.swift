@@ -53,9 +53,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    @IBAction func testButton(_ sender: Any) {
-        print("tesT")
-    }
 }
 
 extension ViewController: WeatherDataDelegate {

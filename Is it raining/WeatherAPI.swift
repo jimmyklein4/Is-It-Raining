@@ -27,7 +27,7 @@ class WeatherAPI: NSObject {
             
         }
         
-        let baseURL = "http://api.openweathermap.org/data/2.5/weather?zip="
+        let baseURL = "https://api.openweathermap.org/data/2.5/weather?zip="
 
         CLGeocoder().reverseGeocodeLocation(location!, completionHandler: {(placemarks, error) -> Void in
             
